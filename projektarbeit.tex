@@ -1,0 +1,43 @@
+% LaTeX-Vorlage Medizintechnik Projektarbeit
+% Wintersemster 2009/10
+% Alexander Ruppel
+% veraendert von Eva Eibenberger 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In dieser Datei muss eigentlich nichts geaendert werden.
+% Ausser, einzubettende Dateinamen werden modifiziert.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Gruppe: Nummer der Projektarbeit
+
+% Thema der Projektarbeit
+\newcommand{\titel}{Titel der Arbeit}
+
+% Studentenname und Matrikelnummer 
+\newcommand{\erster}{Peter Pan}		% Student 1: Vorname Nachname
+\newcommand{\mnreins}{1234567}		% Student 1: Matrikelnummer
+
+% in header Spache einstellen!
+\input{header}
+
+\begin{document}
+
+\input{deckblatt}
+
+% Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+% Dateien, die den Text enthalten
+\input{Kapitel/einleitung}
+
+\input{Kapitel/hauptteil}
+
+\input{Kapitel/fazit}
+
+% Literaturverzeichnis
+\newpage
+\bibliographystyle{apalike}
+\bibliography{Bib/literatur}
+
+\end{document}
