@@ -2,7 +2,7 @@
 
 ## How to import
 
-- [Overleaf website](https://www.overleaf.com/): 
+- [Overleaf website](https://www.overleaf.com/) (recommended, requires no installation): 
     - [Download zip](https://github.com/mt2-erlangen/latex-template/archive/master.zip)
     - [Use drag and drop](https://www.overleaf.com/learn/how-to/I_have_created_a_LaTeX_document_elsewhere%E2%80%94can_I_import_it_into_Overleaf%3F)
 - Ubuntu: `sudo apt install texlive-full texstudio && texstudio`
