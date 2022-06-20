@@ -17,7 +17,7 @@ Before writing your report please add your personal information to the project. 
 - Title
 - Language if you want to write in English: `ngerman` -> `english`
 
-Finally, you are ready to add some content1121 :smiley:
+Finally, you are ready to add some content :smiley:
 
 ## Tutorials
 
