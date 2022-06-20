@@ -13,7 +13,7 @@ Alternatively, you can also install tex locally on your computer:
 ## Getting started
 
 Before writing your report please add your personal information to the project. You can do this by editing the respective fields in `projektarbeit.tex`:
-- Your name/immatricalation number
+- Your name/immatriculation number
 - Title
 - Language if you want to write in English: `ngerman` -> `english`
 
