@@ -11,14 +11,14 @@
 \documentclass[%
 	a4paper, %
 	12pt, %
-	ngerman, % set to english if you want to write in English
+	english, % set to english if you want to write in English
 	bibtotoc %
 ]{scrartcl}
 
 % Gruppe: Nummer der Projektarbeit
 
 % Thema der Projektarbeit
-\newcommand{\titel}{Titel}
+\newcommand{\titel}{Title}
 
 % Studentenname und Matrikelnummer 
 \newcommand{\erster}{Peter Pan}		% Student 1: Vorname Nachname
@@ -36,34 +36,34 @@
 \newpage
 
 % Dateien, die den Text enthalten
-\section{Einleitung}%
+\section{Introduction}%
 \label{sec:einleitung}
-Die Magnetresonanztomographie (MRT) ist \dots
+Magnetic Resonance Imaging (MRI) is \dots
 % High level overview des Verfahrens 
 % Invasiv?
 % (1-2) sätze
 
-\subsection{Vom Physikalischen Signal zum Bild}
-Das Bildgebungsverfahren funktioniert mit Hilfe von \dots
+\subsection{From the Physical Signal to the Image}
+The image acquisition works by \dots
 % phsyikalischer Hintergrund (5-7 Sätze) 
 % wie kommen 
-\subsection{Vor- und Nachteile}
-Die Vorteile von MRT gegenüber anderen Verfahren sind \dots
+\subsection{Advantages and Disadvantages of MRI}
+The advantages of MRI are \dots
 
-Die Nachteile von MRT gegenüber anderen Verfahren sind \dots
+The disadvantages of MRI are  \dots
 
-\subsection{Übersicht}
+\subsection{Overview}
 % (3-5) sätze die einen Überblick über das Projekt geben 
-Im Folgenden \dots
+In the following \dots
 
 
 
-\section{Hauptteil}
+\section{Methods}
 \subsection{k-Space}
-Beim k-Space handelt es sich um \dots
+The k-space is \dots
 % Erklärung - was ist k-space und wie genau ist der Zusammenhang zu Real und Imaginärteil 
 
-Die Formel zur Berechnung Magnitudenbildes und des Phasenbildes\dots
+The formula to calculate the magnitude and phase is \dots
 \begin{equation}
     r =  \\
 \end{equation}
@@ -71,13 +71,13 @@ Die Formel zur Berechnung Magnitudenbildes und des Phasenbildes\dots
     \phi = 
 \end{equation}
 
-In Abbildung \ref{fig:real_imag} \dots
+In Figure \ref{fig:real_imag} \dots
 %beschreibung
 
-In Abbildung \ref{fig:mag_phas} \dots
+In Figure \ref{fig:mag_phas} \dots
 %beschreibung
 
-Wenn man die beiden Bilder miteinander vergleicht, sieht man \dots
+If we compare both figures we can see \dots
 
 
 \begin{figure}
@@ -85,7 +85,7 @@ Wenn man die beiden Bilder miteinander vergleicht, sieht man \dots
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigen den Realteil (links) und den Imaginärteil (rechts) von k-Space}
+    \caption{The Figure shows the real (left) and the imaginary part (left) of the signal.}
     \label{fig:real_imag}
 \end{figure}
 
@@ -94,23 +94,23 @@ Wenn man die beiden Bilder miteinander vergleicht, sieht man \dots
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt die Magnitude (links), die Magnitude in logarith- mischer Skalierung (Mitte) und die Phase (rechts) von k-Space}
+    \caption{The Figure shows the magnitude (left), the magnitude in logarithmic scale (middle) and the phase (right) of the k-space}
     \label{fig:mag_phas}
 \end{figure}
 
 
 
-\subsection{Bildrekonstruktion}
-Um aus \dots
+\subsection{Reconstruction}
+To reconstruct \dots
 % was ist rekonstruction (1-2 sätze) 
 
 \subsubsection{Fourier-Transformation}
-Bei der Fourier-Transformation \dots
+The Fourier-Transformation \dots
 % Was ist die fourier Transformation (1-2 Sätze) 
 % Welchen Algorithmus benutzen wir zur Transformation? 
 % Was versteht man unter Gleichanteil
 
-Abbildung \ref{fig:Verschiebung} zeigt \dots
+Figure \ref{fig:Verschiebung} shows \dots
 % Erkärung des Verfahrens (3-5 Sätze) 
 
 \begin{figure}
@@ -118,7 +118,7 @@ Abbildung \ref{fig:Verschiebung} zeigt \dots
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt die zweidimensionale Fourier-Verschiebung}
+    \caption{The Figure shows the two-dimensional fourier shift.}
     \label{fig:Verschiebung}
 \end{figure}
 
@@ -128,12 +128,12 @@ Abbildung \ref{fig:Verschiebung} zeigt \dots
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Rekonstruktion mit (links) korrekt durchgeführter Verschiebung und ohne (rechts).}
+    \caption{Reconstruction with (left) and without correctly shifted fourier components (right).}
     \label{fig:Verschiebung}
 \end{figure}
 
-\subsubsection{Rekonstruktion}
-Abbildung \ref{fig:mag_re_im} zeigt \dots
+\subsubsection{Reconstruction}
+Figure \ref{fig:mag_re_im} shows \dots
 %Was is zu sehen? 
 %Wie ist es mit \ref{fig:Verschiebung} zu vergleichen? 
 
@@ -142,110 +142,112 @@ Abbildung \ref{fig:mag_re_im} zeigt \dots
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt von links nach rechts die aus dem k-Space rekon- struierten Bilder der Phase, des Realteils und des Imaginärteils}
+    \caption{The Figure shows from left to right the from the k-space reconstructed images of the phase, the real, and the imaginary part}
     \label{fig:mag_re_im}
 \end{figure}
 
-\subsubsection{Reproduktion der Rohdatan}
-Um wieder zu den Rohdaten zurückzukommen muss man \dots
+\subsubsection{Repreduction of the raw image data}
+To get back to the raw image data \dots
 %Was muss man genau machen? 
 %Wieso geht das? 
 
-\subsection{Filterung}
-Nachdem in den vorherigen Kapiteln beschrieben wurde, wie man ein MR-Bild erzeu- gen kann, wollen wir in diesem Kapitel uns damit beschäftigen, wie die Bilder mittels Filter verändert werden können. 
+\subsection{Filter}
 
-Filterung ist \dots\\
-Die niedrigen Frequenzen \dots\\
-Die hohen Frequenzen \dots\\
+After describing how to create an MR image in the previous chapters, in this chapter we will look at how the images can be modified using filters.
 
-Abbildung zeigt \ref{fig:filterung} \dots
+Filtering is \dots\\
+The low frequency \dots\\
+The high frequenzen \dots\\
+
+Figure \ref{fig:filterung} shows \dots
 
 \begin{figure}
     \centering
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt links das Bild ohne die hohen Frequenzen und rechts ohne die niedrigen Frequenzen. Das mittlere Bild (ungefiltert) dient dem Ver- gleich.}
+    \caption{The Figure shows an image without high frequencies on the left and on the right without the low frequencies. The middle one is unfiltered for reference}
     \label{fig:filterung}
 \end{figure}
 
 \subsection{Sinc-Filter}
-Der Sinc-Filter gehört zu den \dots %TODO
-pass-Filtern bei dem \dots 
-%Funktionsweise erklären 
-%Wirkung im k-space
+The sinc filter is a\dots %TODO
+pass filter \dots 
+%how does it work? 
+%Kspace
 
-Abbildung \ref{fig:filterung} zeigt \dots 
+Figure \ref{fig:filterungsinc} shows \dots 
 
 \begin{figure}
     \centering
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt das Magnituden-Bild und die Magnitude von k- Space nach Anwendung des Sinc-Filters.}
-    \label{fig:filterung}
+    \caption{The Figure shows the magnitude image and the magnitude of the k-space after application of the sinc filters.}
+    \label{fig:filterungsinc}
 \end{figure}
 
-Abbildung \ref{fig:filterung-kspace} zeigt \dots
+Figure \ref{fig:filterung-kspace} shows \dots
 
 \begin{figure}
     \centering
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt die Magnitude in logarithmischer Skalierung von k-Space vor (links) und nach (rechts) der Anwendung des Sinc-Filters.}
+    \caption{The Figure shows the magnitude of the k-space before (left) and after (right) application of the sinc filter on a logarithmic scale}
     \label{fig:filterung-kspace}
 \end{figure}
 
-\subsection{Box-Multiplikation}
-Neben dem Sinc-Filter gibt es noch weitere Möglichkeiten die Schärfe eines Bildes zu reduzieren, beispielsweise in dem man den Rand des Frequenzbereiches auf Null setzt.
-Dadurch \dots
-In Abbildung \ref{fig:box-mulitplikation} \dots
+\subsection{Box multiplikation}
+Besides the Sinc filter, there are other ways to reduce the sharpness of an image, for example, by setting the edge of the frequency range to zero.
+Therefore, \dots
+In Figure \ref{fig:box-mulitplikation} \dots
 
 \begin{figure}
     \centering
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt den Absolutbetrag des k-Space und die rekonstruktierten Bilder verschieden vielen auf Null gesetzten Frequenzen}
+    \caption{The figure shows that magnitude of the k-space and the reconstructed image after setting different number of frequencies to zero.}
     \label{fig:box-mulitplikation}
 \end{figure}
 
-\subsection{Vergleich Sinc-Filter und Box-Multiplikation}
-Abbildung \ref{fig:boxvssinc} zeigt den Direktvergleich zwischen 
+\subsection{Comparison between sinc filter and box multiplication}
+Figure \ref{fig:boxvssinc} shows the comparison between \dots
 
 \begin{figure}
     \centering
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt das rekonstruierte Bild nach Anwenden des Sinc-Filters (links) und nach Nullsetzen des Randes (Boxmultiplikation)(rechts)}
+    \caption{The Figure shows the reconstructed image after application of the sinc filter (left) and zeroing out the borders (box multiplication)}
     \label{fig:boxvssinc}
 \end{figure}
 
+
 \subsection{Max Pooling}
-Beim Max Pooling handelt es sich um \dots
+Max pooling is  \dots
 %Erklärung der Operation
 
-In Abbildung \ref{fig:boxvssinc} sieht man \dots
+Figure \ref{fig:maxpooling} shows \dots
 
 \begin{figure}
     \centering
     %TODO add graphic and remove vspace!
     %\includegraphics{}
     \vspace{5cm}
-    \caption{Die Abbildung zeigt das unveränderte Bild (links) und das mit Max Pooling gefilterte Bild (rechts)}
+    \caption{The Figure shows the comparison before (left) and after (right) application of max pooling.}
     \label{fig:maxpooling}
 \end{figure}
 
 
-\section{Fazit}
-Zusammenfassung \dots
+\section{Conclusion}
+Summary \dots
 
-Aktuelle Forschungsrichtung 1 \dots
+Current research 1 \dots
 %Erklärung der Richtung und der Relevanz mit Referenz! 
 
-Aktuelle Forschungsrichtung 2 \dots
+Current research 2 \dots
 %Erklärung der Richtung und der Relevanz mit Referenz! 
 
 
