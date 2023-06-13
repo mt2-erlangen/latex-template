@@ -24,6 +24,12 @@
 \newcommand{\erster}{Peter Pan}		% Student 1: Vorname Nachname
 \newcommand{\mnreins}{1234567}		% Student 1: Matrikelnummer
 
+\newcommand{\todo}[1]{{\color{blue}{TODO: {#1}}}} 
+\newcommand{\sltn}[1]{{\color{red}{SOL: {#1}}}} 
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+
 % in header Spache einstellen!
 \input{header}
 
@@ -38,217 +44,154 @@
 % Dateien, die den Text enthalten
 \section{Introduction}%
 \label{sec:einleitung}
-Magnetic Resonance Imaging (MRI) is \dots
-% High level overview des Verfahrens 
-% Invasiv?
-% (1-2) sätze
+\todo{What is MRI?}
 
-\subsection{From the Physical Signal to the Image}
-The image acquisition works by \dots
-% phsyikalischer Hintergrund (5-7 Sätze) 
-% wie kommen 
-\subsection{Advantages and Disadvantages of MRI}
-The advantages of MRI are \dots
+\todo{Image acquisition}
 
-The disadvantages of MRI are  \dots
+\todo{Advantages and disadvantages}
 
-\subsection{Overview}
-% (3-5) sätze die einen Überblick über das Projekt geben 
-In the following \dots
-
-
+\todo{Overview of the project}
 
 \section{Methods}
 \subsection{k-Space}
-The k-space is \dots
-% Erklärung - was ist k-space und wie genau ist der Zusammenhang zu Real und Imaginärteil 
 
-The formula to calculate the magnitude and phase is \dots
+\todo{Explanation of k-space by referencing equation and figures}
+
+\todo{Figure \ref{fig:real_imag} shows \dots} % reference all figures in text! 
+
+
 \begin{equation}
     r =  \\
 \end{equation}
-\begin{equation}
-    \phi = 
+\begin{equation} 
+    \phi = \\
 \end{equation}
 
-In Figure \ref{fig:real_imag} \dots
-%beschreibung
-
-In Figure \ref{fig:mag_phas} \dots
-%beschreibung
-
-If we compare both figures we can see \dots
 
 
 \begin{figure}
     \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
     \vspace{5cm}
-    \caption{The Figure shows the real (left) and the imaginary part (left) of the signal.}
+    \includegraphics[width=0.6\linewidth]{latex-template-master/Grafiken/brain/realandimag.png}
+    \caption{\todo{Real and imaginary part of the k-space}}
     \label{fig:real_imag}
 \end{figure}
 
 \begin{figure}
     \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The Figure shows the magnitude (left), the magnitude in logarithmic scale (middle) and the phase (right) of the k-space}
+   \includegraphics[width=\linewidth]{latex-template-master/Grafiken/brain/maglogphase.png}
+    \caption{\todo{Magnitude, logarithmic magnitude, and phase of the k-space}}
     \label{fig:mag_phas}
 \end{figure}
 
+\newpage %CAN BE REMOVED FOR SUBMISSION
 
 
 \subsection{Reconstruction}
-To reconstruct \dots
-% was ist rekonstruction (1-2 sätze) 
+\todo{Explain the purpose of reconstruction}
+
+\todo{What is FFT shift}
 
 \subsubsection{Fourier-Transformation}
-The Fourier-Transformation \dots
-% Was ist die fourier Transformation (1-2 Sätze) 
-% Welchen Algorithmus benutzen wir zur Transformation? 
-% Was versteht man unter Gleichanteil
+\todo{Explain Fourier Transformation}
 
-Figure \ref{fig:Verschiebung} shows \dots
-% Erkärung des Verfahrens (3-5 Sätze) 
+
+\subsubsection{MRI Image Reconstruction}
+\todo{Describe and interpret reconstruction}
+
+\todo{What happens if we revert the procedure of reconstruction? Compare Figure \ref{fig:revert}}
+
 
 \begin{figure}
     \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The Figure shows the two-dimensional fourier shift.}
-    \label{fig:Verschiebung}
+    \includegraphics[width=\linewidth]{latex-template-master/Grafiken/brain/kspacereconstructed.png}
+    \caption{\todo{Reconstructed image of magnitude, phase, real, and imaginary part}}
+    \label{fig:reconstructed}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \vspace{5cm} %placeholder 
+    \caption{\todo{Reproduced images of the phase and the magnitude in log-scale}}
+    \label{fig:revert}
 \end{figure}
 
 
-\begin{figure}
-    \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{Reconstruction with (left) and without correctly shifted fourier components (right).}
-    \label{fig:Verschiebung}
-\end{figure}
 
-\subsubsection{Reconstruction}
-Figure \ref{fig:mag_re_im} shows \dots
-%Was is zu sehen? 
-%Wie ist es mit \ref{fig:Verschiebung} zu vergleichen? 
+\subsection{Filters}
+\todo{General introduction into the topic of filtering}
+
+
+\subsubsection{Sinc-Filter}
+\todo{Explain Sinc filtering and its effect}
+
 
 \begin{figure}
     \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The Figure shows from left to right the from the k-space reconstructed images of the phase, the real, and the imaginary part}
-    \label{fig:mag_re_im}
-\end{figure}
-
-\subsubsection{Repreduction of the raw image data}
-To get back to the raw image data \dots
-%Was muss man genau machen? 
-%Wieso geht das? 
-
-\subsection{Filter}
-
-After describing how to create an MR image in the previous chapters, in this chapter we will look at how the images can be modified using filters.
-
-Filtering is \dots\\
-The low frequency \dots\\
-The high frequenzen \dots\\
-
-Figure \ref{fig:filterung} shows \dots
-
-\begin{figure}
-    \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The Figure shows an image without high frequencies on the left and on the right without the low frequencies. The middle one is unfiltered for reference}
-    \label{fig:filterung}
-\end{figure}
-
-\subsection{Sinc-Filter}
-The sinc filter is a\dots %TODO
-pass filter \dots 
-%how does it work? 
-%Kspace
-
-Figure \ref{fig:filterungsinc} shows \dots 
-
-\begin{figure}
-    \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The Figure shows the magnitude image and the magnitude of the k-space after application of the sinc filters.}
+    \includegraphics[width=0.9\linewidth]{latex-template-master/Grafiken/brain/sincilteredimage.png}
+    \caption{\todo{The Figure shows the magnitude image and the magnitude of the k-space after application of the sinc filters.}}
     \label{fig:filterungsinc}
 \end{figure}
 
-Figure \ref{fig:filterung-kspace} shows \dots
+\subsubsection{Box Multiplikation}
+
+\todo{Explain box multiplication and compare it to the sinc filter}
+
+
+\todo{Explain box multiplication with the help of Figure \ref{fig:kspacedifflevels}}
+
+
 
 \begin{figure}
     \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The Figure shows the magnitude of the k-space before (left) and after (right) application of the sinc filter on a logarithmic scale}
-    \label{fig:filterung-kspace}
-\end{figure}
-
-\subsection{Box multiplikation}
-Besides the Sinc filter, there are other ways to reduce the sharpness of an image, for example, by setting the edge of the frequency range to zero.
-Therefore, \dots
-In Figure \ref{fig:box-mulitplikation} \dots
-
-\begin{figure}
-    \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The figure shows that magnitude of the k-space and the reconstructed image after setting different number of frequencies to zero.}
+    \includegraphics[width=0.9\linewidth]{latex-template-master/Grafiken/brain/boxfiltered.png}
+    \caption{\todo{The Figure shows the magnitude image and the magnitude of the k-space after application of the box multiplication.}}
     \label{fig:box-mulitplikation}
 \end{figure}
 
-\subsection{Comparison between sinc filter and box multiplication}
-Figure \ref{fig:boxvssinc} shows the comparison between \dots
 
 \begin{figure}
     \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The Figure shows the reconstructed image after application of the sinc filter (left) and zeroing out the borders (box multiplication)}
-    \label{fig:boxvssinc}
+    \includegraphics[width=0.9\linewidth]{latex-template-master/Grafiken/brain/kspacedifferentlevels.png}
+    \caption{\todo{The Figure shows different levels of image degradation through zeroing k-space. TODO: label the different levels of zeroed k-space.}}
+    \label{fig:kspacedifflevels}
 \end{figure}
 
 
-\subsection{Max Pooling}
-Max pooling is  \dots
-%Erklärung der Operation
+\newpage % TODO can be removed for final submission 
 
-Figure \ref{fig:maxpooling} shows \dots
+\subsection{Reducing the Image Size}
+
+\subsubsection{Cropping k-space}
 
 \begin{figure}
     \centering
-    %TODO add graphic and remove vspace!
-    %\includegraphics{}
-    \vspace{5cm}
-    \caption{The Figure shows the comparison before (left) and after (right) application of max pooling.}
-    \label{fig:maxpooling}
+    \includegraphics[width=0.9\linewidth]{latex-template-master/Grafiken/brain/croppedkspace.png}
+    \caption{\todo{The Figure shows the magnitude image and the magnitude of the k-space after cropping in k-space.}}
+    \label{fig:kspacecrop}
 \end{figure}
 
+\todo{Explain Cropping the k-space}
+
+
+
+\subsubsection{Max Pooling}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{latex-template-master/Grafiken/brain/maxpool.png}
+    \caption{\todo{The Figure shows the original (left), the cropped k-space image (middle), and the scan after applying max pooling (right).}}
+    \label{fig:maxpool}
+\end{figure}
+
+\todo{Explain Max Pooling}
+
+
+\todo{Compare maxpooled and cropped k-space approach}
 
 \section{Conclusion}
-Summary \dots
 
-Current research 1 \dots
-%Erklärung der Richtung und der Relevanz mit Referenz! 
-
-Current research 2 \dots
-%Erklärung der Richtung und der Relevanz mit Referenz! 
+\todo{Current research \cite{Jaeger09}}
 
 
 
